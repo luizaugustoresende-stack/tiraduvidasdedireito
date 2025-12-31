@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tira Dúvidas de Direito</title>
+<style>
+body { font-family: Arial; background:#f4f4f4; padding:20px }
+h1 { text-align:center }
+.card { background:#fff; padding:15px; margin:10px 0; border-radius:5px }
+a { text-decoration:none; color:#003366; font-weight:bold }
+input,button { padding:10px; width:100%; margin-top:10px }
+#resultados { background:#fff; padding:15px; margin-top:10px; border-radius:5px }
+</style>
+</head>
+<body>
+
+<h1>Tira Dúvidas de Direito</h1>
+<p style="text-align:center">Portal jurídico gratuito com leis, modelos e FAQ.</p>
+
+<input type="text" id="pesquisa" placeholder="Digite o assunto ou dúvida">
+<button onclick="buscar()">Buscar</button>
+<div id="resultados"></div>
+
+<div class="card"><a href="areas/familia.html">⚖️ Direito de Família</a></div>
+<div class="card"><a href="areas/trabalho.html">💼 Direito do Trabalho</a></div>
+<div class="card"><a href="areas/penal.html">🚔 Direito Penal</a></div>
+<div class="card"><a href="areas/consumidor.html">🛒 Direito do Consumidor</a></div>
+<div class="card"><a href="faq.html">❓ Dúvidas Comuns (FAQ)</a></div>
+
+<hr>
+<p style="text-align:center">
+<a href="politica-de-privacidade.html">Privacidade</a> |
+<a href="termos-de-uso.html">Termos</a> |
+<a href="aviso-legal.html">Aviso Legal</a>
+</p>
+
+<script src="busca.js"></script>
+</body>
+</html>
