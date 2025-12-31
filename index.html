@@ -1,151 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <title>Tira Dúvidas de Direito</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portal jurídico gratuito com busca por assuntos, leis, códigos e modelos de documentos.">
-
 <style>
 body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") no-repeat center center fixed;
-  background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #2c3e50, #4b6584);
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
 }
 
 .container {
-  background: rgba(255,255,255,0.95);
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 8px;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
 }
 
-h1, h2 {
-  color: #2b2b2b;
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #1a4c7a;
-  font-weight: bold;
+li {
+    margin: 10px 0;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
 }
 
-input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-#resultados {
-  margin-top: 15px;
-}
-
-#resultados li {
-  margin-bottom: 8px;
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #555;
+    text-align: center;
+    color: #eee;
+    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <header>
 <h1>Tira Dúvidas de Direito</h1>
-<p>Portal jurídico gratuito para consulta de leis, códigos e modelos de documentos.</p>
+<p>Leis, códigos e modelos jurídicos organizados</p>
 </header>
 
-<nav>
-<ul>
-<li><a href="leis/constituicao.html">Constituição</a></li>
-<li><a href="leis/codigo-civil.html">Código Civil</a></li>
-<li><a href="leis/codigo-penal.html">Código Penal</a></li>
-<li><a href="leis/clt.html">CLT</a></li>
-<li><a href="modelos/index.html">Modelos Jurídicos</a></li>
-</ul>
-</nav>
+<div class="container">
 
-<section>
 <h2>Buscar por assunto</h2>
-<input type="text" id="searchInput" placeholder="Ex: procuração, furto, CLT, artigo 5" onkeyup="buscar()">
+
+<input 
+  type="text" 
+  id="busca" 
+  placeholder="Digite: CLT, agravo, apelação, divórcio..."
+  onkeyup="buscar()"
+>
+
 <ul id="resultados"></ul>
-</section>
-
-<section>
-<h2>O que você encontra aqui</h2>
-<ul>
-<li>Leis e códigos jurídicos organizados</li>
-<li>Busca por assunto</li>
-<li>Modelos jurídicos prontos para uso</li>
-<li>Conteúdo gratuito e público</li>
-</ul>
-</section>
-
-<section>
-<h2>Aviso importante</h2>
-<p>
-Este site tem caráter exclusivamente informativo e educacional.
-Não substitui a consulta a um advogado habilitado.
-</p>
-</section>
-
-<footer>
-<p>© 2025 – Tira Dúvidas de Direito</p>
-</footer>
 
 </div>
 
+<footer>
+© Tira Dúvidas de Direito
+</footer>
+
 <script>
 const dados = [
-  { titulo: "Constituição Federal", link: "leis/constituicao.html", tags: "constituição artigo 5 direitos fundamentais" },
-  { titulo: "Código Civil", link: "leis/codigo-civil.html", tags: "codigo civil contratos responsabilidade" },
-  { titulo: "Código Penal", link: "leis/codigo-penal.html", tags: "codigo penal crimes furto roubo estelionato" },
-  { titulo: "CLT", link: "leis/clt.html", tags: "clt trabalho férias aviso previo" },
-
-  { titulo: "Modelo de Procuração", link: "modelos/procuracao.html", tags: "procuração advogado poderes" },
-  { titulo: "Petição Inicial", link: "modelos/peticao-inicial.html", tags: "petição inicial ação judicial" },
-  { titulo: "Requerimento Simples", link: "modelos/requerimento-simples.html", tags: "requerimento pedido administrativo" }
+  { texto: "Código Civil", link: "codigo-civil.html" },
+  { texto: "Código Penal", link: "codigo-penal.html" },
+  { texto: "CLT - Consolidação das Leis do Trabalho", link: "clt.html" },
+  { texto: "Constituição Federal", link: "constituicao.html" },
+  { texto: "Modelo de Agravo de Instrumento", link: "agravo.html" },
+  { texto: "Modelo de Apelação", link: "apelacao.html" },
+  { texto: "Modelo de Impugnação", link: "impugnacao.html" },
+  { texto: "Modelo de Recurso Ordinário", link: "recurso-ordinario.html" },
+  { texto: "Modelo de Procuração", link: "procuracao.html" }
 ];
 
 function buscar() {
-  const termo = document.getElementById("searchInput").value.toLowerCase();
+  const termo = document.getElementById("busca").value.toLowerCase();
   const lista = document.getElementById("resultados");
   lista.innerHTML = "";
 
   if (termo.length < 2) return;
 
-  const resultados = dados.filter(item =>
-    item.titulo.toLowerCase().includes(termo) ||
-    item.tags.includes(termo)
-  );
+  dados.forEach(item => {
+    if (item.texto.toLowerCase().includes(termo)) {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${item.link}">${item.texto}</a>`;
+      lista.appendChild(li);
+    }
+  });
+}
+</script>
 
-  if (resultados.length === 0) {
-    lista.innerHTML = "<li>Nenhum resultado encontrado.</li>";
-    return;
-  }
-
-  resultados
+</body>
+</html>
