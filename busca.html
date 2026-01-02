@@ -2,58 +2,34 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Busca Jurídica</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Busca Jurídica – Tira Dúvidas de Direito</title>
+  <link rel="stylesheet" href="./estilo.css">
 </head>
-
 <body>
+
 <header>
   <h1>Tira Dúvidas de Direito</h1>
   <nav>
-    <a href="index.html">Início</a>
-    <a href="tira-duvidas.html">Tira Dúvidas</a>
-    <a href="busca.html">Busca por Assunto</a>
-    <a href="modelos.html">Modelos Jurídicos</a>
-    <a href="leis.html">Leis e Códigos</a>
+    <a href="./index.html">Início</a>
+    <a href="./tira-duvidas.html">Tira Dúvidas</a>
+    <a href="./busca.html">Busca por Assunto</a>
+    <a href="./modelos.html">Modelos Jurídicos</a>
+    <a href="./leis.html">Leis e Códigos</a>
   </nav>
 </header>
 
 <main>
   <h2>Busca por Assunto</h2>
 
-  <input type="text" id="busca" placeholder="Digite: agravo, apelação, CLT..." />
+  <input type="text" id="busca" placeholder="Digite: agravo, CLT, apelação..." />
   <ul id="resultados"></ul>
 </main>
 
-<footer>© 2025 – Tira Dúvidas de Direito</footer>
+<footer>
+  © 2025 – Tira Dúvidas de Direito
+</footer>
 
-<script>
-const dados = [
-  "Agravo de Instrumento",
-  "Apelação Cível",
-  "Contestação",
-  "Impugnação",
-  "Código Civil",
-  "Código Penal",
-  "CLT",
-  "Constituição Federal"
-];
+<script src="./busca.js"></script>
 
-const input = document.getElementById("busca");
-const lista = document.getElementById("resultados");
-
-input.addEventListener("keyup", () => {
-  lista.innerHTML = "";
-  const termo = input.value.toLowerCase();
-
-  dados.forEach(item => {
-    if (item.toLowerCase().includes(termo)) {
-      const li = document.createElement("li");
-      li.textContent = item;
-      lista.appendChild(li);
-    }
-  });
-});
-</script>
 </body>
 </html>
