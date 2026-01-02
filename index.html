@@ -3,137 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>Tira Dúvidas de Direito</title>
-
 <link rel="stylesheet" href="estilo.css">
-
-<style>
-/* Fallback de segurança caso o CSS externo falhe */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f2f2f2;
-}
-
-header {
-  background: #1e2a38;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #2f3e4e;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 20px;
-}
-
-nav a:hover {
-  background: #445c73;
-}
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #1e2a38;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-.busca {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.busca input {
-  width: 70%;
-  padding: 12px;
-  font-size: 16px;
-}
-
-.busca button {
-  padding: 12px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-footer {
-  background: #1e2a38;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-</style>
-
-<script>
-function buscar() {
-  const termo = document.getElementById("campoBusca").value.trim();
-  if (termo === "") {
-    alert("Digite um termo para buscar.");
-    return;
-  }
-  window.location.href = "busca.html?q=" + encodeURIComponent(termo);
-}
-</script>
-
 </head>
+
 <body>
 
-<header>
+<header class="topo">
   <h1>Tira Dúvidas de Direito</h1>
-  <p>Modelos jurídicos, leis completas e esclarecimento de dúvidas comuns</p>
+  <p>Leis, códigos e modelos jurídicos em um só lugar</p>
 </header>
 
-<nav>
+<nav class="menu">
   <a href="index.html">Início</a>
-  <a href="tira-duvidas.html">Tira Dúvidas</a>
-  <a href="modelos.html">Modelos Jurídicos</a>
+  <a href="modelos.html">Modelos</a>
   <a href="leis.html">Leis e Códigos</a>
+  <a href="tira-duvidas.html">Tira Dúvidas</a>
   <a href="busca.html">Busca</a>
 </nav>
 
-<main>
+<main class="conteudo">
 
 <section class="busca">
-  <h2>Busca por assunto</h2>
-  <input type="text" id="campoBusca" placeholder="Ex: pensão alimentícia, recurso, CLT...">
+  <h2>Buscar por assunto</h2>
+  <input type="text" id="campoBusca" placeholder="Ex: pensão, recurso, CLT">
   <button onclick="buscar()">Buscar</button>
 </section>
 
@@ -141,34 +33,43 @@ function buscar() {
 
   <div class="card">
     <h3>📄 Modelos Jurídicos</h3>
-    <p>Petições iniciais, recursos, agravos, impugnações, contestações e mais.</p>
-    <a href="modelos.html">Acessar modelos</a>
+    <p>Petições, recursos, agravos, impugnações e contestações.</p>
+    <a href="modelos.html">Acessar</a>
   </div>
 
   <div class="card">
     <h3>⚖️ Leis e Códigos</h3>
-    <p>Código Civil, Penal, CLT, Constituição Federal e legislação essencial.</p>
-    <a href="leis.html">Ver leis completas</a>
+    <p>Código Civil, Penal, CLT, Constituição Federal.</p>
+    <a href="leis.html">Ver Leis</a>
   </div>
 
   <div class="card">
     <h3>❓ Tira Dúvidas</h3>
-    <p>Dúvidas jurídicas comuns organizadas por tema.</p>
-    <a href="tira-duvidas.html">Tirar dúvidas</a>
+    <p>Dúvidas jurídicas comuns explicadas de forma objetiva.</p>
+    <a href="tira-duvidas.html">Consultar</a>
   </div>
 
 </section>
 
 </main>
 
-<footer>
-  <p>
-    <a href="aviso-legal.html">Aviso Legal</a> |
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="contato.html">Contato</a>
-  </p>
+<footer class="rodape">
+  <a href="aviso-legal.html">Aviso Legal</a> |
+  <a href="privacidade.html">Privacidade</a> |
+  <a href="contato.html">Contato</a>
   <p>© 2026 - Tira Dúvidas de Direito</p>
 </footer>
+
+<script>
+function buscar() {
+  const termo = document.getElementById("campoBusca").value.trim();
+  if (!termo) {
+    alert("Digite um termo para buscar.");
+    return;
+  }
+  window.location.href = "busca.html?q=" + encodeURIComponent(termo);
+}
+</script>
 
 </body>
 </html>
