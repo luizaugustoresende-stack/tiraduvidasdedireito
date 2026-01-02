@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* CORPO */
+/* CORPO E FUNDO */
 body {
   font-family: "Georgia", "Times New Roman", serif;
   background: url("https://images.unsplash.com/photo-1505664194779-8beaceb93744") no-repeat center center fixed;
@@ -71,43 +71,10 @@ main, .conteudo {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* BUSCA */
-.busca {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.busca h2 {
-  margin-bottom: 15px;
-}
-
-.busca input {
-  width: 65%;
-  max-width: 520px;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #bbb;
-  border-radius: 6px;
-}
-
-.busca button {
-  padding: 12px 22px;
-  margin-left: 8px;
-  background: #1e2a38;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.busca button:hover {
-  background: #445c73;
-}
-
 /* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 25px;
 }
 
@@ -147,6 +114,39 @@ ul {
 
 ul li {
   margin-bottom: 10px;
+}
+
+/* BUSCA */
+.busca {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.busca h2 {
+  margin-bottom: 15px;
+}
+
+.busca input {
+  width: 65%;
+  max-width: 520px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.busca button {
+  padding: 12px 22px;
+  margin-left: 8px;
+  background: #1e2a38;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.busca button:hover {
+  background: #445c73;
 }
 
 /* RODAPÉ */
