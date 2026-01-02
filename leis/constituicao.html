@@ -2,37 +2,60 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Constituição Federal de 1988</title>
+<title>Constituição Federal – Tira Dúvidas de Direito</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #2c3e50, #4b6584);
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background: linear-gradient(120deg,#2c2c54,#40407a);
 }
-header {
-    padding: 30px;
-    text-align: center;
-    color: #fff;
+header{
+  background: rgba(0,0,0,.75);
+  color:#fff;
+  padding:20px;
+  text-align:center;
 }
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
 }
-p {
-    line-height: 1.6;
-    color: #333;
+nav a:hover{ text-decoration:underline; }
+
+.search-box{ margin-top:15px; }
+.search-box input{
+  width:75%;
+  padding:12px;
+  font-size:16px;
+  border-radius:6px;
+  border:none;
 }
-h2 {
-    color: #2c3e50;
+
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
 }
-footer {
-    text-align: center;
-    color: #eee;
-    padding: 20px;
+
+.article{
+  border-bottom:1px solid #ddd;
+  padding:15px 0;
+}
+.article h3{ color:#2c2c54; }
+.article p{
+  color:#333;
+  line-height:1.6;
+  text-align:justify;
+}
+
+footer{
+  text-align:center;
+  color:#eee;
+  padding:20px;
 }
 </style>
 </head>
@@ -40,22 +63,65 @@ footer {
 <body>
 
 <header>
-<h1>Constituição da República Federativa do Brasil</h1>
-<p>Promulgada em 5 de outubro de 1988</p>
+  <h1>Constituição Federal de 1988</h1>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="codigo-civil.html">Código Civil</a>
+    <a href="codigo-penal.html">Código Penal</a>
+    <a href="clt.html">CLT</a>
+    <a href="constituicao.html">Constituição</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar por artigo ou tema (ex: direitos fundamentais, liberdade, trabalho)">
+  </div>
 </header>
 
 <div class="container">
 
-<h2>Princípios Fundamentais</h2>
+<div class="article" data-keywords="artigo 1 fundamentos republica cidadania dignidade">
+  <h3>Art. 1º – Fundamentos da República</h3>
+  <p>
+  A República Federativa do Brasil constitui-se em Estado Democrático de Direito e tem como fundamentos:
+  a soberania, a cidadania, a dignidade da pessoa humana, os valores sociais do trabalho e da livre iniciativa
+  e o pluralismo político.
+  </p>
+</div>
 
-<p><strong>Art. 1º</strong> A República Federativa do Brasil é formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constituindo-se em Estado Democrático de Direito.</p>
+<div class="article" data-keywords="artigo 3 objetivos fundamentais erradicar pobreza">
+  <h3>Art. 3º – Objetivos Fundamentais</h3>
+  <p>
+  Constituem objetivos fundamentais da República Federativa do Brasil:
+  construir uma sociedade livre, justa e solidária; garantir o desenvolvimento nacional;
+  erradicar a pobreza e reduzir as desigualdades sociais.
+  </p>
+</div>
 
-<p><strong>Art. 2º</strong> São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.</p>
+<div class="article" data-keywords="artigo 5 direitos garantias fundamentais liberdade igualdade">
+  <h3>Art. 5º – Direitos e Garantias Fundamentais</h3>
+  <p>
+  Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros
+  e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade,
+  à igualdade, à segurança e à propriedade.
+  </p>
+</div>
 
-<h2>Direitos e Garantias Fundamentais</h2>
+<div class="article" data-keywords="artigo 6 direitos sociais educacao saude trabalho">
+  <h3>Art. 6º – Direitos Sociais</h3>
+  <p>
+  São direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia,
+  o transporte, o lazer, a segurança, a previdência social e a proteção à maternidade e à infância.
+  </p>
+</div>
 
-<p><strong>Art. 5º</strong> Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.</p>
+<div class="article" data-keywords="artigo 37 administracao publica legalidade impessoalidade">
+  <h3>Art. 37 – Administração Pública</h3>
+  <p>
+  A administração pública direta e indireta obedecerá aos princípios de legalidade,
+  impessoalidade, moralidade, publicidade e eficiência.
+  </p>
+</div>
 
-<p><strong>Art. 5º, inciso XXXV</strong> A lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito.</p>
-
-<p><strong>Art. 5º, inciso LV</strong> Aos litigantes, em processo judicial ou administrativo, e aos acu
+<div class="article" data-keywords="artigo 225 meio ambiente ecologicamente equilibrado">
+  <h3>Art. 225 – Meio Ambiente</h3>
