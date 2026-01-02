@@ -53,6 +53,14 @@ main {
   background: #f0f0f0;
   padding: 20px;
   border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background: #e6e6e6;
 }
 
 form {
@@ -91,29 +99,29 @@ footer {
 <header>
   <div>🏛️ Tira Dúvidas de Direito</div>
   <nav>
-    <a href="#">Início</a>
+    <a href="#inicio">Início</a>
     <a href="#busca">Busca</a>
   </nav>
 </header>
 
-<main>
+<main id="inicio">
   <h1>Portal Jurídico Gratuito</h1>
 
   <p>
-    Tire dúvidas jurídicas, consulte leis e encontre modelos de petições.
+    Tire dúvidas jurídicas, consulte leis e utilize modelos de petições.
     Conteúdo informativo.
   </p>
 
   <section class="cards">
-    <div class="card">
-      <h2>Modelos</h2>
-      <p>Apelação, Agravo, Impugnação, Recursos.</p>
-    </div>
+    <a href="modelos.html" class="card">
+      <h2>📄 Modelos Jurídicos</h2>
+      <p>Apelação, Agravo, Impugnação, Recursos e mais.</p>
+    </a>
 
-    <div class="card">
-      <h2>Leis</h2>
-      <p>Constituição, Códigos, CLT.</p>
-    </div>
+    <a href="leis.html" class="card">
+      <h2>⚖️ Leis e Códigos</h2>
+      <p>Constituição, Códigos, CLT e legislação.</p>
+    </a>
   </section>
 
   <hr>
@@ -141,16 +149,15 @@ function buscar(e) {
   resultado.innerHTML = "";
 
   const dados = [
-    "Apelação",
-    "Agravo de Instrumento",
-    "Impugnação",
-    "Constituição Federal",
-    "Código Civil",
-    "Código Penal",
-    "CLT"
+    { texto: "Apelação", link: "modelos.html" },
+    { texto: "Agravo de Instrumento", link: "modelos.html" },
+    { texto: "Impugnação", link: "modelos.html" },
+    { texto: "Constituição Federal", link: "leis.html" },
+    { texto: "Código Civil", link: "leis.html" },
+    { texto: "CLT", link: "leis.html" }
   ];
 
-  const achados = dados.filter(d => d.toLowerCase().includes(termo));
+  const achados = dados.filter(d => d.texto.toLowerCase().includes(termo));
 
   if (achados.length === 0) {
     resultado.innerHTML = "<li>Nenhum resultado encontrado.</li>";
@@ -159,7 +166,7 @@ function buscar(e) {
 
   achados.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = item;
+    li.innerHTML = `<a href="${item.link}">${item.texto}</a>`;
     resultado.appendChild(li);
   });
 }
