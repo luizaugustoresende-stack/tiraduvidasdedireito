@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Contato</title>
-<style>
-body { font-family: Arial; background:#f4f4f4; padding:30px; }
-main { max-width:900px; background:#fff; padding:30px; margin:auto; border-radius:8px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Tira Dúvidas de Direito</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-<h1>Contato</h1>
 
-<p>Este canal destina-se apenas a comunicações gerais.</p>
+<header>
+  <h1>Contato</h1>
+  <p>Entre em contato conosco para dúvidas ou sugestões</p>
+</header>
 
-<p>
-📧 Email: contato@seudominio.com
-</p>
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="modelos.html">Modelos</a>
+  <a href="leis.html">Leis e Códigos</a>
+  <a href="tira-duvidas.html">Tira Dúvidas</a>
+  <a href="busca.html">Busca</a>
+  <a href="contato.html">Contato</a>
+</nav>
 
-<p>
-Não realizamos consultoria jurídica por este meio.
-</p>
-
-<a href="index.html">⬅ Voltar ao início</a>
+<main class="conteudo">
+  <form>
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+    <button type="submit">Enviar</button>
+  </form>
 </main>
+
+<footer class="rodape">
+  <p>© 2026 Tira Dúvidas de Direito | Todos os direitos reservados</p>
+  <p>
+    <a href="privacidade.html">Política de Privacidade</a> |
+    <a href="aviso-legal.html">Aviso Legal</a>
+  </p>
+</footer>
+
 </body>
 </html>
