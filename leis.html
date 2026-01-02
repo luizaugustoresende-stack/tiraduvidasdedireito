@@ -1,67 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Leis e Códigos</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-}
-
-header, footer {
-  background: #1e1e1e;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-a {
-  color: #003366;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leis e Códigos - Tira Dúvidas de Direito</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-  <h2>⚖️ Leis e Códigos</h2>
-  <a href="index.html" style="color:white;">⬅ Voltar ao início</a>
+  <h1>Leis e Códigos</h1>
+  <p>Consulte Código Civil, Penal, CLT, Constituição e mais</p>
 </header>
 
-<main>
-  <ul>
-    <li><a href="#">Constituição Federal</a></li>
-    <li><a href="#">Código Civil</a></li>
-    <li><a href="#">Código Penal</a></li>
-    <li><a href="#">Código de Processo Civil</a></li>
-    <li><a href="#">Código de Processo Penal</a></li>
-    <li><a href="#">CLT</a></li>
-  </ul>
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="modelos.html">Modelos</a>
+  <a href="leis.html">Leis e Códigos</a>
+  <a href="tira-duvidas.html">Tira Dúvidas</a>
+  <a href="busca.html">Busca</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<main class="conteudo">
+  <section class="cards">
+    <div class="card">
+      <h3>Código Civil</h3>
+      <p>Artigos e consultas sobre o Código Civil.</p>
+      <a href="leis/codigo-civil.html">Abrir</a>
+    </div>
+    <div class="card">
+      <h3>Código Penal</h3>
+      <p>Artigos e consultas sobre o Código Penal.</p>
+      <a href="leis/codigo-penal.html">Abrir</a>
+    </div>
+    <div class="card">
+      <h3>CLT</h3>
+      <p>Legislação trabalhista completa.</p>
+      <a href="leis/clt.html">Abrir</a>
+    </div>
+    <div class="card">
+      <h3>Constituição</h3>
+      <p>Artigos da Constituição Federal.</p>
+      <a href="leis/constituicao.html">Abrir</a>
+    </div>
+  </section>
 </main>
 
-<footer>
-  Texto legal para consulta
+<footer class="rodape">
+  <p>© 2026 Tira Dúvidas de Direito | Todos os direitos reservados</p>
+  <p>
+    <a href="privacidade.html">Política de Privacidade</a> |
+    <a href="aviso-legal.html">Aviso Legal</a>
+  </p>
 </footer>
 
 </body>
