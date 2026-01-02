@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Busca Jurídica – Tira Dúvidas de Direito</title>
-  <link rel="stylesheet" href="./estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca - Tira Dúvidas de Direito</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="busca.js" defer></script>
 </head>
 <body>
 
 <header>
-  <h1>Tira Dúvidas de Direito</h1>
-  <nav>
-    <a href="./index.html">Início</a>
-    <a href="./tira-duvidas.html">Tira Dúvidas</a>
-    <a href="./busca.html">Busca por Assunto</a>
-    <a href="./modelos.html">Modelos Jurídicos</a>
-    <a href="./leis.html">Leis e Códigos</a>
-  </nav>
+  <h1>Busca Avançada</h1>
+  <p>Encontre leis, modelos ou dúvidas por assunto</p>
 </header>
 
-<main>
-  <h2>Busca por Assunto</h2>
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="modelos.html">Modelos</a>
+  <a href="leis.html">Leis e Códigos</a>
+  <a href="tira-duvidas.html">Tira Dúvidas</a>
+  <a href="busca.html">Busca</a>
+  <a href="contato.html">Contato</a>
+</nav>
 
-  <input type="text" id="busca" placeholder="Digite: agravo, CLT, apelação..." />
-  <ul id="resultados"></ul>
+<main class="conteudo">
+  <section>
+    <input type="text" id="campo-busca" placeholder="Digite o assunto ou palavra-chave">
+    <button onclick="executarBusca()">Pesquisar</button>
+    <div id="resultado-busca"></div>
+  </section>
 </main>
 
-<footer>
-  © 2025 – Tira Dúvidas de Direito
+<footer class="rodape">
+  <p>© 2026 Tira Dúvidas de Direito | Todos os direitos reservados</p>
+  <p>
+    <a href="privacidade.html">Política de Privacidade</a> |
+    <a href="aviso-legal.html">Aviso Legal</a>
+  </p>
 </footer>
-
-<script src="./busca.js"></script>
 
 </body>
 </html>
