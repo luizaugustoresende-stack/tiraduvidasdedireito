@@ -2,34 +2,60 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>CLT - Consolidação das Leis do Trabalho</title>
+<title>CLT – Consolidação das Leis do Trabalho</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #2c3e50, #4b6584);
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background: linear-gradient(120deg,#1f2a44,#3c4f76);
 }
-header {
-    padding: 30px;
-    text-align: center;
-    color: #fff;
+header{
+  background: rgba(0,0,0,.75);
+  color:#fff;
+  padding:20px;
+  text-align:center;
 }
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
 }
-p {
-    line-height: 1.6;
-    color: #333;
+nav a:hover{ text-decoration:underline; }
+
+.search-box{ margin-top:15px; }
+.search-box input{
+  width:75%;
+  padding:12px;
+  font-size:16px;
+  border-radius:6px;
+  border:none;
 }
-footer {
-    text-align: center;
-    color: #eee;
-    padding: 20px;
+
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
+}
+
+.article{
+  border-bottom:1px solid #ddd;
+  padding:15px 0;
+}
+.article h3{ color:#1f2a44; }
+.article p{
+  color:#333;
+  line-height:1.6;
+  text-align:justify;
+}
+
+footer{
+  text-align:center;
+  color:#eee;
+  padding:20px;
 }
 </style>
 </head>
@@ -37,29 +63,34 @@ footer {
 <body>
 
 <header>
-<h1>Consolidação das Leis do Trabalho (CLT)</h1>
-<p>Decreto-Lei nº 5.452/1943</p>
+  <h1>CLT – Consolidação das Leis do Trabalho</h1>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="codigo-civil.html">Código Civil</a>
+    <a href="codigo-penal.html">Código Penal</a>
+    <a href="clt.html">CLT</a>
+    <a href="constituicao.html">Constituição</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Buscar por artigo ou tema (ex: férias, salário, justa causa)">
+  </div>
 </header>
 
 <div class="container">
 
-<p><strong>Art. 2º</strong> Considera-se empregador a empresa que, assumindo os riscos da atividade econômica, admite, assalaria e dirige a prestação pessoal de serviço.</p>
-
-<p><strong>Art. 3º</strong> Considera-se empregado toda pessoa física que prestar serviços de natureza não eventual a empregador, sob a dependência deste e mediante salário.</p>
-
-<p><strong>Art. 7º</strong> São direitos dos trabalhadores urbanos e rurais, além de outros que visem à melhoria de sua condição social.</p>
-
-<p><strong>Art. 58</strong> A duração normal do trabalho não excederá 8 horas diárias.</p>
-
-<p><strong>Art. 129</strong> Todo empregado terá direito anualmente ao gozo de um período de férias.</p>
-
-<p><strong>Art. 477</strong> É assegurado ao empregado o pagamento das verbas rescisórias.</p>
-
+<div class="article" data-keywords="artigo 2 empregador empresa">
+  <h3>Art. 2º – Empregador</h3>
+  <p>
+  Considera-se empregador a empresa, individual ou coletiva, que assumindo os riscos da atividade econômica,
+  admite, assalaria e dirige a prestação pessoal de serviço.
+  </p>
 </div>
 
-<footer>
-© Tira Dúvidas de Direito
-</footer>
-
-</body>
-</html>
+<div class="article" data-keywords="artigo 3 empregado pessoa fisica subordinacao">
+  <h3>Art. 3º – Empregado</h3>
+  <p>
+  Considera-se empregado toda pessoa física que prestar serviços de natureza não eventual
+  a empregador, sob a dependência deste e mediante salário.
+  <
