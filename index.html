@@ -11,25 +11,49 @@ body {
     background: linear-gradient(120deg, #2c3e50, #4b6584);
 }
 
+/* TOPO */
 header {
-    padding: 40px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
     text-align: center;
     color: #fff;
 }
 
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* BUSCA */
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* CONTEÚDO */
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1100px;
+    margin: 40px auto;
     background: #ffffff;
     padding: 30px;
     border-radius: 8px;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-bottom: 20px;
+h2 {
+    color: #2c3e50;
 }
 
 ul {
@@ -38,19 +62,21 @@ ul {
 }
 
 li {
-    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-a {
+li a {
     text-decoration: none;
     color: #2c3e50;
     font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+li a:hover {
+    color: #1e90ff;
 }
 
+/* RODAPÉ */
 footer {
     text-align: center;
     color: #eee;
@@ -62,58 +88,52 @@ footer {
 <body>
 
 <header>
-<h1>Tira Dúvidas de Direito</h1>
-<p>Leis, códigos e modelos jurídicos organizados</p>
+    <h1>Tira Dúvidas de Direito</h1>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="codigo-civil.html">Código Civil</a>
+        <a href="codigo-penal.html">Código Penal</a>
+        <a href="clt.html">CLT</a>
+        <a href="constituicao.html">Constituição</a>
+    </nav>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar por assunto, recurso, modelo jurídico...">
+    </div>
 </header>
 
 <div class="container">
+<h2>Resultados</h2>
 
-<h2>Buscar por assunto</h2>
+<ul id="resultsList">
 
-<input 
-  type="text" 
-  id="busca" 
-  placeholder="Digite: CLT, agravo, apelação, divórcio..."
-  onkeyup="buscar()"
->
+<li data-keywords="apelação recurso sentença cível">
+<a href="apelacao.html">Apelação</a>
+</li>
 
-<ul id="resultados"></ul>
+<li data-keywords="agravo instrumento decisão interlocutória">
+<a href="agravo-instrumento.html">Agravo de Instrumento</a>
+</li>
 
-</div>
+<li data-keywords="contestação defesa réu">
+<a href="contestacao.html">Contestação</a>
+</li>
 
-<footer>
-© Tira Dúvidas de Direito
-</footer>
+<li data-keywords="embargos declaração omissão contradição obscuridade">
+<a href="embargos-declaracao.html">Embargos de Declaração</a>
+</li>
 
-<script>
-const dados = [
-  { texto: "Código Civil", link: "codigo-civil.html" },
-  { texto: "Código Penal", link: "codigo-penal.html" },
-  { texto: "CLT - Consolidação das Leis do Trabalho", link: "clt.html" },
-  { texto: "Constituição Federal", link: "constituicao.html" },
-  { texto: "Modelo de Agravo de Instrumento", link: "agravo.html" },
-  { texto: "Modelo de Apelação", link: "apelacao.html" },
-  { texto: "Modelo de Impugnação", link: "impugnacao.html" },
-  { texto: "Modelo de Recurso Ordinário", link: "recurso-ordinario.html" },
-  { texto: "Modelo de Procuração", link: "procuracao.html" }
-];
+<li data-keywords="embargos execução cobrança título">
+<a href="embargos-execucao.html">Embargos à Execução</a>
+</li>
 
-function buscar() {
-  const termo = document.getElementById("busca").value.toLowerCase();
-  const lista = document.getElementById("resultados");
-  lista.innerHTML = "";
+<li data-keywords="impugnação cumprimento sentença execução">
+<a href="impugnacao-cumprimento-sentenca.html">Impugnação ao Cumprimento de Sentença</a>
+</li>
 
-  if (termo.length < 2) return;
+<li data-keywords="habeas corpus prisão liberdade penal">
+<a href="habeas-corpus.html">Habeas Corpus</a>
+</li>
 
-  dados.forEach(item => {
-    if (item.texto.toLowerCase().includes(termo)) {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="${item.link}">${item.texto}</a>`;
-      lista.appendChild(li);
-    }
-  });
-}
-</script>
-
-</body>
-</html>
+<li dat
