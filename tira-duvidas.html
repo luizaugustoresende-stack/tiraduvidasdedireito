@@ -1,55 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tira Dúvidas - Tira Dúvidas de Direito</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<title>Tira-Dúvidas Jurídico - TiraDúvidasDeDireito</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/jsadsbygoogle.js?client=ca-pub-3762175535259498"
+     crossorigin="anonymous"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+    background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80');
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+    margin:0;
+    font-family:'Roboto',sans-serif;
+    color:#222;
+}
+.overlay{
+    background:rgba(0,0,0,0.6);
+    min-height:100vh;
+    padding:50px 15px;
+}
+.container{
+    max-width:1150px;
+    margin:auto;
+    background:rgba(255,255,255,0.97);
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+h1{
+    font-family:'Playfair Display',serif;
+    text-align:center;
+    font-size:3em;
+    margin-bottom:15px;
+}
+p.desc{
+    text-align:center;
+    font-size:1.15em;
+    margin-bottom:40px;
+}
+.faq{
+    margin-bottom:25px;
+}
+.faq h3{
+    cursor:pointer;
+    background:#f0f0f0;
+    padding:18px;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    font-size:1.15em;
+}
+.faq div{
+    display:none;
+    padding:18px;
+    background:#fff;
+    border-radius:0 0 10px 10px;
+    line-height:1.7;
+}
+.voltar{
+    display:inline-block;
+    margin-top:40px;
+    padding:12px 22px;
+    background:#1e90ff;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:1.1em;
+}
+.voltar:hover{background:#ff4500;}
+@media(max-width:600px){
+    h1{font-size:2.4em;}
+}
+</style>
+
+<script>
+function toggleFAQ(id){
+    var el=document.getElementById(id);
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 </head>
+
 <body>
+<div class="overlay">
+<div class="container">
 
-<header>
-  <h1>Tira Dúvidas</h1>
-  <p>Faça sua pergunta sobre Direito e receba respostas detalhadas</p>
-</header>
+<h1>Tira-Dúvidas Jurídico</h1>
+<p class="desc">
+Perguntas frequentes sobre procedimentos e direitos no cotidiano jurídico.
+</p>
 
-<nav class="menu">
-  <a href="index.html">Início</a>
-  <a href="modelos.html">Modelos</a>
-  <a href="leis.html">Leis e Códigos</a>
-  <a href="tira-duvidas.html">Tira Dúvidas</a>
-  <a href="busca.html">Busca</a>
-  <a href="contato.html">Contato</a>
-</nav>
+<div class="faq">
+<h3 onclick="toggleFAQ('q1')">O que é uma petição inicial?</h3>
+<div id="q1">
+É o instrumento por meio do qual se provoca a atuação do Poder Judiciário,
+dando início ao processo judicial.
+</div>
+</div>
 
-<main class="conteudo">
-  <section class="cards">
-    <div class="card">
-      <h3>Pergunta</h3>
-      <p>Como funciona um recurso de apelação?</p>
-      <p>Resposta: Um recurso de apelação é ... (exemplo detalhado).</p>
-    </div>
-    <div class="card">
-      <h3>Pergunta</h3>
-      <p>Quais são os tipos de procuração?</p>
-      <p>Resposta: Existem procuração ad judicia, ad negotia ...</p>
-    </div>
-    <div class="card">
-      <h3>Pergunta</h3>
-      <p>Como consultar artigos do Código Penal?</p>
-      <p>Resposta: Você pode acessar diretamente o arquivo do código penal ...</p>
-    </div>
-  </section>
-</main>
+<div class="faq">
+<h3 onclick="toggleFAQ('q2')">Qual a diferença entre recurso especial e extraordinário?</h3>
+<div id="q2">
+O recurso especial trata de violação à lei federal, enquanto o extraordinário
+discute matéria constitucional.
+</div>
+</div>
 
-<footer class="rodape">
-  <p>© 2026 Tira Dúvidas de Direito | Todos os direitos reservados</p>
-  <p>
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="aviso-legal.html">Aviso Legal</a>
-  </p>
-</footer>
+<div class="faq">
+<h3 onclick="toggleFAQ('q3')">O que é habeas corpus?</h3>
+<div id="q3">
+É uma ação constitucional destinada a proteger o direito de locomoção
+contra ilegalidade ou abuso de poder.
+</div>
+</div>
 
+<div class="faq">
+<h3 onclick="toggleFAQ('q4')">Quando cabe agravo de instrumento?</h3>
+<div id="q4">
+Cabe agravo de instrumento contra decisões interlocutórias previstas
+expressamente no Código de Processo Civil.
+</div>
+</div>
+
+<a href="index.html" class="voltar">← Voltar à Página Inicial</a>
+
+</div>
+</div>
 </body>
 </html>
