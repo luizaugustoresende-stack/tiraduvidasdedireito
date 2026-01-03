@@ -1,59 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leis e Códigos - Tira Dúvidas de Direito</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Leis - TiraDúvidasDeDireito</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body {
+    background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+.container {
+    background: rgba(255,255,255,0.95);
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-bottom: 25px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+li { margin: 10px 0; }
+a.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: 500;
+    font-size: 1.1em;
+    background: #1e90ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+a.btn:hover { background: #ff4500; transform: translateY(-2px); }
+a.btn-voltar {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 18px;
+    background: #1e90ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+a.btn-voltar:hover { background: #ff4500; }
+@media (max-width: 600px) {
+    .container { padding: 20px; margin: 30px 10px; }
+    h1 { font-size: 2.2em; }
+    a.btn { font-size: 1em; padding: 10px 18px; }
+}
+</style>
 </head>
 <body>
-
-<header>
-  <h1>Leis e Códigos</h1>
-  <p>Consulte Código Civil, Penal, CLT, Constituição e mais</p>
-</header>
-
-<nav class="menu">
-  <a href="index.html">Início</a>
-  <a href="modelos.html">Modelos</a>
-  <a href="leis.html">Leis e Códigos</a>
-  <a href="tira-duvidas.html">Tira Dúvidas</a>
-  <a href="busca.html">Busca</a>
-  <a href="contato.html">Contato</a>
-</nav>
-
-<main class="conteudo">
-  <section class="cards">
-    <div class="card">
-      <h3>Código Civil</h3>
-      <p>Artigos e consultas sobre o Código Civil.</p>
-      <a href="leis/codigo-civil.html">Abrir</a>
-    </div>
-    <div class="card">
-      <h3>Código Penal</h3>
-      <p>Artigos e consultas sobre o Código Penal.</p>
-      <a href="leis/codigo-penal.html">Abrir</a>
-    </div>
-    <div class="card">
-      <h3>CLT</h3>
-      <p>Legislação trabalhista completa.</p>
-      <a href="leis/clt.html">Abrir</a>
-    </div>
-    <div class="card">
-      <h3>Constituição</h3>
-      <p>Artigos da Constituição Federal.</p>
-      <a href="leis/constituicao.html">Abrir</a>
-    </div>
-  </section>
-</main>
-
-<footer class="rodape">
-  <p>© 2026 Tira Dúvidas de Direito | Todos os direitos reservados</p>
-  <p>
-    <a href="privacidade.html">Política de Privacidade</a> |
-    <a href="aviso-legal.html">Aviso Legal</a>
-  </p>
-</footer>
-
+<div class="container">
+    <h1>Leis</h1>
+    <p>Escolha a lei que deseja consultar:</p>
+    <ul>
+        <li><a href="constituicao.html" class="btn">Constituição Federal</a></li>
+        <li><a href="codigo_civil.html" class="btn">Código Civil</a></li>
+        <li><a href="codigo_penal.html" class="btn">Código Penal</a></li>
+        <li><a href="clt.html" class="btn">CLT</a></li>
+        <li><a href="estatutos.html" class="btn">Estatutos</a></li>
+    </ul>
+    <a href="index.html" class="btn-voltar">← Voltar à Página Inicial</a>
+</div>
 </body>
 </html>
