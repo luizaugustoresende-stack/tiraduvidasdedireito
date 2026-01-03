@@ -1,69 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Busca Jurídica</title>
-  <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
+const dados = [
+    { titulo: "Constituição Federal", url: "leis.html" },
+    { titulo: "Código de Processo Civil", url: "leis.html" },
+    { titulo: "Código Penal", url: "leis.html" },
+    { titulo: "CLT", url: "leis.html" },
+    { titulo: "Código de Defesa do Consumidor", url: "leis.html" },
 
-<header class="topo">
-  <div class="logo">🏛️ Tira Dúvidas de Direito</div>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="tira-duvidas.html">Tira Dúvidas</a>
-    <a href="busca.html">Busca</a>
-    <a href="modelos.html">Modelos</a>
-    <a href="leis.html">Leis</a>
-  </nav>
-</header>
+    { titulo: "Petição Inicial", url: "peticao_inicial.html" },
+    { titulo: "Contestação", url: "contestacao.html" },
+    { titulo: "Manifestação", url: "manifestacao.html" },
+    { titulo: "Impugnação", url: "impugnacao.html" },
+    { titulo: "Procuração", url: "procuracao.html" },
 
-<main class="conteudo">
-  <h1>Busca por assunto</h1>
+    { titulo: "Apelação", url: "apelacao.html" },
+    { titulo: "Agravo de Instrumento", url: "agravo_instrumento.html" },
+    { titulo: "Agravo Retido", url: "agravo_retido.html" },
+    { titulo: "Agravo de Impedimento", url: "agravo_impedimento.html" },
 
-  <form onsubmit="buscar(event)">
-    <input type="text" id="termo" placeholder="Digite sua dúvida ou assunto jurídico" required>
-    <button type="submit">Pesquisar</button>
-  </form>
+    { titulo: "Embargos de Declaração", url: "embargos_declaracao.html" },
+    { titulo: "Embargos Infringentes", url: "embargos_infringentes.html" },
 
-  <ul id="resultado" class="lista"></ul>
-</main>
+    { titulo: "Recurso Inominado", url: "recurso_inominado.html" },
+    { titulo: "Recurso Especial", url: "recurso_especial.html" },
+    { titulo: "Recurso Extraordinário", url: "recurso_extraordinario.html" },
 
-<footer class="rodape">© 2025</footer>
+    { titulo: "Habeas Corpus", url: "habeas_corpus.html" },
+    { titulo: "Habeas Data", url: "habeas_data.html" }
+];
 
-<script>
-function buscar(e) {
-  e.preventDefault();
+function buscar(){
+    const termo = document.getElementById("searchInput").value.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
 
-  const termo = document.getElementById("termo").value.toLowerCase();
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = "";
+    if(termo.trim() === ""){
+        resultsDiv.innerHTML = "<p>Digite algo para buscar.</p>";
+        return;
+    }
 
-  const dados = [
-    { texto: "Apelação", link: "modelos/apelacao.html" },
-    { texto: "Agravo de Instrumento", link: "modelos/agravo-instrumento.html" },
-    { texto: "Impugnação", link: "modelos/impugnacao.html" },
-    { texto: "Constituição Federal", link: "leis/constituicao.html" },
-    { texto: "Código Civil", link: "leis/codigo-civil.html" },
-    { texto: "CLT", link: "leis/clt.html" }
-  ];
+    const resultados = dados.filter(item =>
+        item.titulo.toLowerCase().includes(termo)
+    );
 
-  const achados = dados.filter(item =>
-    item.texto.toLowerCase().includes(termo)
-  );
+    if(resultados.length === 0){
+        resultsDiv.innerHTML = "<p>Nenhum resultado encontrado.</p>";
+        return;
+    }
 
-  if (achados.length === 0) {
-    resultado.innerHTML = "<li>Nenhum resultado encontrado.</li>";
-    return;
-  }
-
-  achados.forEach(item => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${item.link}">${item.texto}</a>`;
-    resultado.appendChild(li);
-  });
+    resultados.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `<a href="${item.url}">${item.titulo}</a>`;
+        resultsDiv.appendChild(div);
+    });
 }
-</script>
-
-</body>
-</html>
