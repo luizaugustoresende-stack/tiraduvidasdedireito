@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Constituição Federal - TiraDúvidasDeDireito</title>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
+     crossorigin="anonymous"></script>
+
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 body {
     background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1350&q=80');
@@ -15,54 +22,51 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #222;
 }
-.conteudo {
+.container {
     background: rgba(255,255,255,0.95);
+    max-width: 950px;
     margin: 50px auto;
-    max-width: 900px;
-    padding: 30px;
+    padding: 35px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 h1 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
-    text-align: center;
     font-size: 2.5em;
-    color: #1a1a1a;
     margin-bottom: 25px;
+    text-align: center;
 }
-ul { padding-left: 20px; }
-a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+p, pre {
+    font-size: 1.1em;
+    line-height: 1.7;
+    white-space: pre-wrap;
 }
-a:hover { color: #ff4500; }
-.btn-voltar {
+a.btn-voltar {
     display: inline-block;
     margin-top: 25px;
     padding: 10px 18px;
     background: #1e90ff;
     color: #fff;
     border-radius: 8px;
-    font-weight: 500;
     text-decoration: none;
     transition: background 0.2s;
 }
-.btn-voltar:hover { background: #ff4500; }
-p { line-height: 1.7; }
+a.btn-voltar:hover { background: #ff4500; }
+@media (max-width: 600px) {
+    .container { padding: 20px; margin: 30px 10px; }
+    h1 { font-size: 2.2em; }
+}
 </style>
 </head>
 <body>
-<div class="conteudo">
-    <h1>Constituição Federal do Brasil</h1>
-    <p>Você pode acessar o texto completo da Constituição Federal em versão oficial online:</p>
-    <ul>
-        <li><a href="https://www2.senado.leg.br/bdsf/handle/id/685819" target="_blank">Constituição Federal - Senado Federal</a></li>
-        <li><a href="https://www12.senado.leg.br/perguntas-frequentes/canais-de-atendimento/biblioteca/como-posso-ter-acesso-gratuito-ao-texto-integral-da-constituicao-do-brasil" target="_blank">Versão em texto na web</a></li>
-    </ul>
-    <a href="index.html" class="btn-voltar">← Voltar à Página Inicial</a>
+<div class="container">
+    <h1>Constituição Federal</h1>
+    <pre>
+    <!-- Aqui você cola o conteúdo completo da Constituição Federal -->
+    Art. 1º - A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:...
+    </pre>
+    <a href="leis.html" class="btn-voltar">← Voltar às Leis</a>
 </div>
 </body>
 </html>
