@@ -2,16 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Leis e Códigos | Pesquisa Jurídica</title>
+<title>Leis Completas - Tira Duvidas de Direito</title>
 
-<meta name="description" content="Busca completa de leis brasileiras: Constituição, códigos e estatutos atualizados.">
+<meta name="description" content="Leis completas: Constituição, CLT, Estatutos, Código Civil, Código Penal, Código Tributário, Código de Trânsito, Legislação Empresarial e mais.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
 crossorigin="anonymous"></script>
 
-<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -20,81 +18,49 @@ body{
   font-family:'Merriweather',serif;
   background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover fixed;
 }
-.overlay{
-  background:rgba(255,255,255,0.94);
-  min-height:100vh;
-}
-header{
-  background:#1f2a44;
-  color:#fff;
-  padding:22px;
-  text-align:center;
-}
-nav a{
-  color:#fff;
-  margin:0 14px;
-  text-decoration:none;
-  font-weight:700;
-}
+.overlay{background:rgba(255,255,255,0.94);min-height:100vh;}
+header{background:#1f2a44;color:#fff;padding:26px;text-align:center;}
+nav a{color:#fff;margin:0 16px;text-decoration:none;font-weight:700;}
 main{
-  max-width:1100px;
-  margin:30px auto;
-  background:#fff;
-  border-radius:6px;
-  padding:30px;
-  box-shadow:0 4px 16px rgba(0,0,0,.2);
+  max-width:1200px;margin:40px auto;background:#fff;
+  border-radius:10px;padding:45px;
+  box-shadow:0 6px 22px rgba(0,0,0,.25);
 }
-.search-area{
-  display:flex;
-  gap:10px;
-  margin-bottom:30px;
-}
-.search-area input{
-  flex:1;
-  padding:14px;
-  font-size:18px;
-  border:2px solid #ccc;
-  border-radius:6px;
+.search-area{display:flex;gap:12px;margin-bottom:30px;}
+.search-area input,select{
+  flex:1;padding:16px;font-size:18px;border:2px solid #999;border-radius:8px;
 }
 .search-area button{
-  padding:14px 22px;
-  font-size:18px;
-  background:#1f2a44;
+  padding:16px 26px;font-size:18px;
+  background:#1f2a44;color:#fff;border:none;border-radius:8px;cursor:pointer;
+}
+.search-area button:hover{background:#2f4172;}
+.lei{padding:18px;border-bottom:1px solid #ddd;}
+.lei a{font-weight:700;color:#1f2a44;cursor:pointer;margin-right:12px;}
+footer{text-align:center;margin:35px;color:#444;font-size:14px;}
+
+.modal{
+  display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,.7);z-index:999;
+}
+.modal-content{
+  background:#fff;margin:5% auto;padding:30px;
+  max-width:900px;border-radius:8px;
+  max-height:80vh;overflow:auto;
+}
+.close{float:right;font-size:24px;cursor:pointer;font-weight:700;}
+pre{white-space:pre-wrap;font-family:'Merriweather',serif;font-size:14px;}
+.download-btn{
+  display:inline-block;
+  padding:6px 12px;
+  background:#2a2a72;
   color:#fff;
-  border:none;
   border-radius:6px;
+  text-decoration:none;
+  font-weight:700;
   cursor:pointer;
 }
-.search-area button:hover{
-  background:#2d3c66;
-}
-h2{
-  border-bottom:2px solid #ccc;
-  padding-bottom:6px;
-  margin-top:30px;
-}
-ul{
-  list-style:none;
-  padding:0;
-}
-li{
-  margin:14px 0;
-}
-a.lei{
-  font-size:18px;
-  text-decoration:none;
-  color:#1f2a44;
-  font-weight:700;
-}
-a.lei:hover{
-  text-decoration:underline;
-}
-footer{
-  text-align:center;
-  margin:25px;
-  color:#444;
-  font-size:14px;
-}
+.download-btn:hover{background:#1f2a44;}
 </style>
 </head>
 
@@ -102,9 +68,9 @@ footer{
 <div class="overlay">
 
 <header>
-  <h1>Leis, Códigos e Estatutos</h1>
+  <h1>Leis Completas</h1>
   <nav>
-    <a href="index.html">Início</a>
+    <a href="index.html">Inicio</a>
     <a href="modelos.html">Modelos</a>
     <a href="contato.html">Contato</a>
   </nav>
@@ -113,41 +79,134 @@ footer{
 <main>
 
 <div class="search-area">
-  <input type="text" id="campoBusca" placeholder="Digite: Constituição, CPC, CDC, OAB...">
-  <button onclick="filtrar()">🔍 Buscar</button>
+  <input id="buscaTexto" placeholder="Digite: Constituição, CLT, Estatuto, Previdenciaria...">
+  <select id="buscaTipo">
+    <option value="">Todos</option>
+    <option value="Constituicao">Constituição</option>
+    <option value="Trabalhista">Trabalhista</option>
+    <option value="Estatuto">Estatutos</option>
+    <option value="Penal">Penal</option>
+    <option value="Civil">Civil</option>
+    <option value="Previdenciaria">Previdenciaria</option>
+    <option value="Tributario">Tributario</option>
+    <option value="Transito">Transito</option>
+    <option value="Empresarial">Empresarial</option>
+  </select>
+  <button onclick="filtrar()">Buscar</button>
 </div>
 
-<h2>Legislação</h2>
-
-<ul id="listaLeis">
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição Federal</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406.htm">Código Civil</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm">Código Penal</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm">Código de Processo Civil</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm">Código de Processo Penal</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8078.htm">Código de Defesa do Consumidor</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm">Estatuto da Criança e do Adolescente</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm">Estatuto do Idoso</a></li>
-  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8906.htm">Estatuto da OAB</a></li>
-</ul>
+<div id="listaLeis"></div>
 
 </main>
 
-<footer>
-© 2026 – Tira Dúvidas de Direito
-</footer>
+<footer>© 2026 – Tira Duvidas de Direito</footer>
+</div>
 
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fechar()">&times;</span>
+    <pre id="conteudo"></pre>
+    <a id="downloadLink" class="download-btn" download>Baixar Lei</a>
+  </div>
 </div>
 
 <script>
-function filtrar(){
-  let termo = document.getElementById("campoBusca").value.toLowerCase();
-  let itens = document.querySelectorAll("#listaLeis li");
+const leis = [
+{nome:"Constituicao Federal",tipo:"Constituicao",texto:
+`CONSTITUICAO DA REPUBLICA FEDERATIVA DO BRASIL - 1988
+[Texto completo, todos os artigos]`},
 
-  itens.forEach(item=>{
-    item.style.display = item.innerText.toLowerCase().includes(termo) ? "" : "none";
+{nome:"CLT - Consolidacao das Leis do Trabalho",tipo:"Trabalhista",texto:
+`CONSOLIDACAO DAS LEIS DO TRABALHO - CLT
+[Texto completo, todos os artigos]`},
+
+{nome:"Estatuto da Crianca e do Adolescente",tipo:"Estatuto",texto:
+`ESTATUTO DA CRIANCA E DO ADOLESCENTE - ECA
+[Texto completo]`},
+
+{nome:"Estatuto do Idoso",tipo:"Estatuto",texto:
+`ESTATUTO DO IDOSO
+[Texto completo]`},
+
+{nome:"Estatuto da OAB",tipo:"Estatuto",texto:
+`ESTATUTO DA ORDEM DOS ADVOGADOS DO BRASIL
+[Texto completo]`},
+
+{nome:"Codigo de Defesa do Consumidor",tipo:"Civil",texto:
+`CODIGO DE DEFESA DO CONSUMIDOR
+[Texto completo]`},
+
+{nome:"Codigo de Processo Civil",tipo:"Civil",texto:
+`CODIGO DE PROCESSO CIVIL
+[Texto completo]`},
+
+{nome:"Codigo de Processo Penal",tipo:"Penal",texto:
+`CODIGO DE PROCESSO PENAL
+[Texto completo]`},
+
+{nome:"Lei Previdenciaria 1",tipo:"Previdenciaria",texto:
+`LEI PREVIDENCIARIA 1
+[Texto completo da lei previdenciaria]`},
+
+{nome:"Lei Previdenciaria 2",tipo:"Previdenciaria",texto:
+`LEI PREVIDENCIARIA 2
+[Texto completo da lei previdenciaria]`},
+
+{nome:"Codigo Tributario Nacional",tipo:"Tributario",texto:
+`CODIGO TRIBUTARIO NACIONAL
+[Texto completo]`},
+
+{nome:"Codigo de Transito Brasileiro",tipo:"Transito",texto:
+`CODIGO DE TRANSITO BRASILEIRO - CTB
+[Texto completo]`},
+
+{nome:"Legislacao Empresarial",tipo:"Empresarial",texto:
+`LEGISLACAO EMPRESARIAL
+[Texto completo]`}
+];
+
+function render(lista){
+  const div=document.getElementById("listaLeis");
+  div.innerHTML="";
+  lista.forEach((m,i)=>{
+    div.innerHTML+=`
+      <div class="lei">
+        <strong>${m.nome}</strong><br>
+        Tipo: ${m.tipo}<br>
+        <a onclick="abrir(${i})">Visualizar</a>
+        <a onclick="baixar(${i})" class="download-btn">Baixar</a>
+      </div>`;
   });
 }
+
+function filtrar(){
+  const t=buscaTexto.value.toLowerCase();
+  const tp=buscaTipo.value;
+  render(leis.filter(m=>m.nome.toLowerCase().includes(t)&&(tp===""||m.tipo===tp)));
+}
+
+function abrir(i){
+  const modal=document.getElementById("modal");
+  document.getElementById("conteudo").textContent=leis[i].texto;
+  const link=document.getElementById("downloadLink");
+  const blob=new Blob([leis[i].texto],{type:'text/plain'});
+  link.href=URL.createObjectURL(blob);
+  link.download=leis[i].nome.replace(/\s+/g,'_')+'.txt';
+  modal.style.display="block";
+}
+
+function fechar(){document.getElementById("modal").style.display="none";}
+
+function baixar(i){
+  const blob=new Blob([leis[i].texto],{type:'text/plain'});
+  const link=document.createElement('a');
+  link.href=URL.createObjectURL(blob);
+  link.download=leis[i].nome.replace(/\s+/g,'_')+'.txt';
+  link.click();
+}
+
+render(leis);
 </script>
 
 </body>
