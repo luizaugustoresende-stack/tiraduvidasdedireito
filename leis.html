@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Leis e Códigos – Tira Dúvidas de Direito</title>
+<title>Leis e Códigos – Pesquisa Jurídica</title>
 
-<meta name="description" content="Acesso direto e integral à Constituição Federal, códigos e estatutos brasileiros atualizados.">
+<meta name="description" content="Pesquise rapidamente a Constituição, códigos e estatutos brasileiros atualizados.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
@@ -19,11 +19,11 @@ body{
   background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover fixed;
 }
 .overlay{
-  background:rgba(255,255,255,0.88);
+  background:rgba(255,255,255,0.92);
   min-height:100vh;
 }
 header{
-  background:rgba(31,42,68,0.95);
+  background:#1f2a44;
   color:#fff;
   padding:22px;
   text-align:center;
@@ -41,6 +41,16 @@ main{
   border-radius:6px;
   padding:30px;
   box-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+.search-box{
+  margin:20px 0 30px;
+}
+.search-box input{
+  width:100%;
+  padding:14px;
+  font-size:18px;
+  border:2px solid #ccc;
+  border-radius:6px;
 }
 h2{
   border-bottom:2px solid #ccc;
@@ -76,7 +86,7 @@ footer{
 <div class="overlay">
 
 <header>
-  <h1>Leis, Códigos e Estatutos</h1>
+  <h1>Pesquisa de Leis e Códigos</h1>
   <nav>
     <a href="index.html">Início</a>
     <a href="modelos.html">Modelos</a>
@@ -86,27 +96,18 @@ footer{
 
 <main>
 
-<h2>Constituição</h2>
-<ul>
-  <li>
-    <a class="lei" target="_blank"
-       href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">
-      Constituição Federal – Texto Integral
-    </a>
-  </li>
-</ul>
+<div class="search-box">
+  <input type="text" id="busca" placeholder="Digite: Constituição, CPC, CDC, OAB..." onkeyup="filtrar()">
+</div>
 
-<h2>Códigos</h2>
-<ul>
+<h2>Legislação</h2>
+<ul id="lista">
+  <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição Federal</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406.htm">Código Civil</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm">Código Penal</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm">Código de Processo Civil</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm">Código de Processo Penal</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8078.htm">Código de Defesa do Consumidor</a></li>
-</ul>
-
-<h2>Estatutos</h2>
-<ul>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm">Estatuto da Criança e do Adolescente</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm">Estatuto do Idoso</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/l8906.htm">Estatuto da OAB</a></li>
@@ -115,9 +116,20 @@ footer{
 </main>
 
 <footer>
-© 2026 – Tira Dúvidas de Direito
+© 2026 – Pesquisa Jurídica
 </footer>
 
 </div>
+
+<script>
+function filtrar(){
+  let input = document.getElementById("busca").value.toLowerCase();
+  let itens = document.querySelectorAll("#lista li");
+  itens.forEach(li=>{
+    li.style.display = li.innerText.toLowerCase().includes(input) ? "" : "none";
+  });
+}
+</script>
+
 </body>
 </html>
