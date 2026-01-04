@@ -2,14 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Leis e Códigos – Pesquisa Jurídica</title>
+<title>Leis e Códigos | Pesquisa Jurídica</title>
 
-<meta name="description" content="Pesquise rapidamente a Constituição, códigos e estatutos brasileiros atualizados.">
+<meta name="description" content="Busca completa de leis brasileiras: Constituição, códigos e estatutos atualizados.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
 crossorigin="anonymous"></script>
 
+<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -19,7 +21,7 @@ body{
   background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover fixed;
 }
 .overlay{
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.94);
   min-height:100vh;
 }
 header{
@@ -40,22 +42,36 @@ main{
   background:#fff;
   border-radius:6px;
   padding:30px;
-  box-shadow:0 4px 14px rgba(0,0,0,.18);
+  box-shadow:0 4px 16px rgba(0,0,0,.2);
 }
-.search-box{
-  margin:20px 0 30px;
+.search-area{
+  display:flex;
+  gap:10px;
+  margin-bottom:30px;
 }
-.search-box input{
-  width:100%;
+.search-area input{
+  flex:1;
   padding:14px;
   font-size:18px;
   border:2px solid #ccc;
   border-radius:6px;
 }
+.search-area button{
+  padding:14px 22px;
+  font-size:18px;
+  background:#1f2a44;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.search-area button:hover{
+  background:#2d3c66;
+}
 h2{
   border-bottom:2px solid #ccc;
   padding-bottom:6px;
-  margin-top:40px;
+  margin-top:30px;
 }
 ul{
   list-style:none;
@@ -86,7 +102,7 @@ footer{
 <div class="overlay">
 
 <header>
-  <h1>Pesquisa de Leis e Códigos</h1>
+  <h1>Leis, Códigos e Estatutos</h1>
   <nav>
     <a href="index.html">Início</a>
     <a href="modelos.html">Modelos</a>
@@ -96,12 +112,14 @@ footer{
 
 <main>
 
-<div class="search-box">
-  <input type="text" id="busca" placeholder="Digite: Constituição, CPC, CDC, OAB..." onkeyup="filtrar()">
+<div class="search-area">
+  <input type="text" id="campoBusca" placeholder="Digite: Constituição, CPC, CDC, OAB...">
+  <button onclick="filtrar()">🔍 Buscar</button>
 </div>
 
 <h2>Legislação</h2>
-<ul id="lista">
+
+<ul id="listaLeis">
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Constituição Federal</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406.htm">Código Civil</a></li>
   <li><a class="lei" target="_blank" href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm">Código Penal</a></li>
@@ -116,17 +134,18 @@ footer{
 </main>
 
 <footer>
-© 2026 – Pesquisa Jurídica
+© 2026 – Tira Dúvidas de Direito
 </footer>
 
 </div>
 
 <script>
 function filtrar(){
-  let input = document.getElementById("busca").value.toLowerCase();
-  let itens = document.querySelectorAll("#lista li");
-  itens.forEach(li=>{
-    li.style.display = li.innerText.toLowerCase().includes(input) ? "" : "none";
+  let termo = document.getElementById("campoBusca").value.toLowerCase();
+  let itens = document.querySelectorAll("#listaLeis li");
+
+  itens.forEach(item=>{
+    item.style.display = item.innerText.toLowerCase().includes(termo) ? "" : "none";
   });
 }
 </script>
