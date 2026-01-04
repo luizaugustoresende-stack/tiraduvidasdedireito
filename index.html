@@ -2,40 +2,105 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Tira Duvidas de Direito</title>
-<meta name="description" content="Site com leis completas e modelos de pecas juridicas para consulta e download.">
+<title>Tira Dúvidas de Direito</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
-crossorigin="anonymous"></script>
+<meta name="description" content="Tira dúvidas de direito com acesso a leis completas, códigos, estatutos e modelos jurídicos.">
 
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
+crossorigin="anonymous"></script>
 
 <style>
 body{
   margin:0;
   font-family:'Merriweather',serif;
   background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover fixed;
-  background-size:cover;
 }
-.overlay{background:rgba(255,255,255,0.94);min-height:100vh;}
-header{background:#1f2a44;color:#fff;padding:30px;text-align:center;}
-nav a{color:#fff;margin:0 18px;text-decoration:none;font-weight:700;}
-main{
-  max-width:1200px;margin:50px auto;background:#fff;
-  border-radius:10px;padding:50px;
+.overlay{
+  background:rgba(255,255,255,0.92);
+  min-height:100vh;
+}
+header{
+  background:#1f2a44;
+  color:#fff;
+  padding:26px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  margin:0 16px;
+  text-decoration:none;
+  font-weight:700;
+}
+.hero{
+  max-width:900px;
+  margin:60px auto;
+  background:#fff;
+  padding:50px;
+  border-radius:12px;
   box-shadow:0 6px 22px rgba(0,0,0,.25);
   text-align:center;
 }
-h1{font-size:36px;margin-bottom:20px;}
-h2{margin-top:40px;margin-bottom:20px;}
-a.button{
-  display:inline-block;padding:16px 32px;margin:12px;
-  background:#1f2a44;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;
+.hero h1{
+  font-size:36px;
+  margin-bottom:20px;
 }
-a.button:hover{background:#2f4172;}
-footer{text-align:center;margin:40px;color:#444;font-size:14px;}
+.hero p{
+  font-size:18px;
+  color:#444;
+}
+.search-box{
+  display:flex;
+  gap:12px;
+  margin-top:35px;
+}
+.search-box input{
+  flex:1;
+  padding:16px;
+  font-size:18px;
+  border:2px solid #999;
+  border-radius:8px;
+}
+.search-box button{
+  padding:16px 26px;
+  font-size:18px;
+  background:#1f2a44;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+.search-box button:hover{
+  background:#2f4172;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:60px auto;
+}
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  text-align:center;
+}
+.card a{
+  display:inline-block;
+  margin-top:15px;
+  text-decoration:none;
+  font-weight:700;
+  color:#1f2a44;
+}
+footer{
+  text-align:center;
+  margin:40px;
+  color:#444;
+  font-size:14px;
+}
 </style>
 </head>
 
@@ -43,37 +108,60 @@ footer{text-align:center;margin:40px;color:#444;font-size:14px;}
 <div class="overlay">
 
 <header>
-  <h1>Tira Duvidas de Direito</h1>
+  <h1>Tira Dúvidas de Direito</h1>
   <nav>
-    <a href="modelos.html">Modelos</a>
+    <a href="index.html">Início</a>
     <a href="leis.html">Leis</a>
+    <a href="modelos.html">Modelos</a>
     <a href="contato.html">Contato</a>
   </nav>
 </header>
 
-<main>
-  <h2>Bem-vindo!</h2>
-  <p>Consulte modelos completos de pecas juridicas, leis, estatutos e códigos. Visualize online ou baixe para seu uso.</p>
+<section class="hero">
+  <h1>Pesquise leis, códigos e estatutos</h1>
+  <p>Consulte a legislação brasileira na íntegra e modelos jurídicos prontos.</p>
 
-  <a href="modelos.html" class="button">Modelos de Pecas</a>
-  <a href="leis.html" class="button">Leis Completas</a>
-
-  <!-- Espaço para anúncios -->
-  <div style="margin:40px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3762175535259498"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+  <!-- BUSCA NA HOME -->
+  <div class="search-box">
+    <input id="buscaHome" placeholder="Ex: Constituição, CLT, Código Civil...">
+    <button onclick="buscar()">Pesquisar</button>
   </div>
+</section>
 
-</main>
+<section class="cards">
+  <div class="card">
+    <h3>Leis e Códigos</h3>
+    <p>Constituição, CLT, CPC, CPP, Estatutos e mais.</p>
+    <a href="leis.html">Acessar</a>
+  </div>
+  <div class="card">
+    <h3>Modelos Jurídicos</h3>
+    <p>Petições e recursos prontos para uso.</p>
+    <a href="modelos.html">Ver modelos</a>
+  </div>
+  <div class="card">
+    <h3>Dúvidas Frequentes</h3>
+    <p>Respostas claras sobre direito.</p>
+    <a href="tiraduvidas.html">Consultar</a>
+  </div>
+</section>
 
-<footer>© 2026 – Tira Duvidas de Direito</footer>
+<footer>
+© 2026 – Tira Dúvidas de Direito
+</footer>
+
 </div>
+
+<script>
+function buscar(){
+  const q = document.getElementById("buscaHome").value.trim();
+  if(q !== ""){
+    window.location.href = "leis.html?busca=" + encodeURIComponent(q);
+  }else{
+    window.location.href = "leis.html";
+  }
+}
+</script>
+
 </body>
 </html>
