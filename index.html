@@ -2,115 +2,105 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Tira Dúvidas de Direito | Leis, Códigos e Modelos Jurídicos</title>
+<title>Tira Dúvidas de Direito – Pesquisa Jurídica</title>
 
-<meta name="description" content="Portal jurídico com acesso direto às leis, códigos, estatutos e modelos jurídicos completos.">
+<meta name="description" content="Pesquise leis, códigos, estatutos e modelos de peças jurídicas em um só lugar.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
- crossorigin="anonymous"></script>
+crossorigin="anonymous"></script>
 
 <!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Merriweather', serif;
-  background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  color: #1a1a1a;
+body{
+  margin:0;
+  font-family:'Merriweather',serif;
+  background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover fixed;
 }
-
-.overlay {
-  background: rgba(255,255,255,0.78);
-  min-height: 100vh;
+.overlay{
+  background:rgba(255,255,255,0.93);
+  min-height:100vh;
 }
-
-header {
-  background: rgba(31,42,68,0.85);
-  color: #fff;
-  padding: 18px 20px;
-  text-align: center;
+header{
+  background:#1f2a44;
+  color:#fff;
+  padding:28px;
+  text-align:center;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
+header h1{
+  margin:0;
+  font-size:32px;
 }
-
-nav {
-  margin-top: 10px;
+nav{
+  margin-top:14px;
 }
-
-nav a {
-  color: #fff;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: 700;
+nav a{
+  color:#fff;
+  margin:0 16px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:18px;
 }
-
-nav a:hover {
-  text-decoration: underline;
+main{
+  max-width:1200px;
+  margin:40px auto;
+  background:#fff;
+  border-radius:10px;
+  padding:45px;
+  box-shadow:0 6px 22px rgba(0,0,0,.25);
 }
-
-main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 35px;
-  background: rgba(255,255,255,0.92);
-  border-radius: 8px;
+.intro{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:35px;
+  color:#222;
 }
-
-.hero {
-  text-align: center;
-  margin-bottom: 40px;
+.search-box{
+  display:flex;
+  gap:12px;
+  margin-bottom:40px;
 }
-
-.hero p {
-  font-size: 18px;
-  line-height: 1.6;
+.search-box input{
+  flex:1;
+  padding:18px;
+  font-size:20px;
+  border:2px solid #888;
+  border-radius:8px;
 }
-
-.search-box {
-  margin-top: 30px;
-  text-align: center;
+.search-box button{
+  padding:18px 30px;
+  font-size:20px;
+  background:#1f2a44;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
 }
-
-.search-box input {
-  width: 80%;
-  max-width: 600px;
-  padding: 14px;
-  font-size: 16px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+.search-box button:hover{
+  background:#2f4172;
 }
-
-.results {
-  margin-top: 30px;
+.result{
+  padding:16px;
+  border-bottom:1px solid #ddd;
 }
-
-.results a {
-  display: block;
-  padding: 8px 0;
-  color: #1f2a44;
-  text-decoration: none;
-  font-weight: 700;
+.result a{
+  font-size:19px;
+  font-weight:700;
+  text-decoration:none;
+  color:#1f2a44;
 }
-
-.results a:hover {
-  text-decoration: underline;
+.tag{
+  font-size:14px;
+  color:#555;
 }
-
-footer {
-  text-align: center;
-  margin-top: 50px;
-  padding-bottom: 30px;
-  color: #444;
-  font-size: 14px;
+footer{
+  text-align:center;
+  margin:35px;
+  color:#444;
+  font-size:14px;
 }
 </style>
 </head>
@@ -121,72 +111,85 @@ footer {
 <header>
   <h1>Tira Dúvidas de Direito</h1>
   <nav>
-    <a href="index.html">Início</a>
     <a href="leis.html">Leis</a>
     <a href="modelos.html">Modelos</a>
-    <a href="tiraduvidas.html">Tira Dúvidas</a>
     <a href="contato.html">Contato</a>
   </nav>
 </header>
 
 <main>
 
-<section class="hero">
-  <p>
-    Portal jurídico com acesso direto e organizado às principais leis,
-    códigos, estatutos e modelos de peças processuais, todos em texto integral.
-  </p>
-</section>
+<div class="intro">
+  Pesquise <strong>leis, códigos, estatutos e modelos de peças jurídicas</strong> de forma rápida e direta.
+</div>
 
-<section class="search-box">
-  <input type="text" id="searchInput" placeholder="Buscar leis ou modelos jurídicos...">
-</section>
+<div class="search-box">
+  <input type="text" id="campoBusca" placeholder="Digite: CPC, apelação, CDC, habeas corpus...">
+  <button onclick="buscar()">🔍 Buscar</button>
+</div>
 
-<section class="results" id="results"></section>
+<div id="resultados"></div>
 
 </main>
 
 <footer>
-  © 2026 – Tira Dúvidas de Direito
+© 2026 – Tira Dúvidas de Direito
 </footer>
 
 </div>
 
 <script>
-const data = [
-  { name: "Constituição Federal", link: "constituicao_federal.html" },
-  { name: "Código de Processo Civil", link: "codigo_processo_civil.html" },
-  { name: "Código de Processo Penal", link: "codigo_processo_penal.html" },
-  { name: "Código Civil", link: "codigo_civil.html" },
-  { name: "Código Penal", link: "codigo_penal.html" },
-  { name: "Código de Defesa do Consumidor", link: "codigo_consumidor.html" },
-  { name: "Estatuto da Criança e do Adolescente", link: "estatuto_crianca.html" },
-  { name: "Estatuto do Idoso", link: "estatuto_idoso.html" },
-  { name: "Estatuto da OAB", link: "estatuto_oab.html" },
-  { name: "Petição Inicial", link: "peticao_inicial.html" },
-  { name: "Contestação", link: "contestacao.html" },
-  { name: "Apelação", link: "apelacao.html" },
-  { name: "Agravo de Instrumento", link: "agravo_instrumento.html" },
-  { name: "Habeas Corpus", link: "habeas_corpus.html" }
+const dados = [
+  // LEIS
+  {nome:"Constituicao Federal", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"},
+  {nome:"Codigo Civil", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/leis/2002/l10406.htm"},
+  {nome:"Codigo Penal", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848.htm"},
+  {nome:"Codigo de Processo Civil", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"},
+  {nome:"Codigo de Processo Penal", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"},
+  {nome:"Codigo de Defesa do Consumidor", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/leis/l8078.htm"},
+  {nome:"Estatuto da Crianca e do Adolescente", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"},
+  {nome:"Estatuto do Idoso", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"},
+  {nome:"Estatuto da OAB", tipo:"Lei", link:"https://www.planalto.gov.br/ccivil_03/leis/l8906.htm"},
+
+  // MODELOS
+  {nome:"Peticao Inicial", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Contestacao", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Apelacao", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Agravo de Instrumento", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Embargos de Declaracao", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Habeas Corpus", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Recurso Especial", tipo:"Modelo", link:"modelos.html"},
+  {nome:"Recurso Extraordinario", tipo:"Modelo", link:"modelos.html"}
 ];
 
-const input = document.getElementById("searchInput");
-const results = document.getElementById("results");
+function buscar(){
+  const termo = document.getElementById("campoBusca").value.toLowerCase();
+  const div = document.getElementById("resultados");
+  div.innerHTML = "";
 
-input.addEventListener("input", function() {
-  const value = this.value.toLowerCase();
-  results.innerHTML = "";
-  if (value.length < 2) return;
+  if(termo.trim()===""){
+    div.innerHTML = "<p>Digite algo para pesquisar.</p>";
+    return;
+  }
 
-  data.forEach(item => {
-    if (item.name.toLowerCase().includes(value)) {
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.textContent = item.name;
-      results.appendChild(a);
+  let achou = false;
+
+  dados.forEach(item=>{
+    if(item.nome.toLowerCase().includes(termo)){
+      achou = true;
+      div.innerHTML += `
+        <div class="result">
+          <a href="${item.link}" target="_blank">${item.nome}</a><br>
+          <span class="tag">${item.tipo}</span>
+        </div>
+      `;
     }
   });
-});
+
+  if(!achou){
+    div.innerHTML = "<p>Nenhum resultado encontrado.</p>";
+  }
+}
 </script>
 
 </body>
