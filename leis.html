@@ -79,7 +79,7 @@ pre{white-space:pre-wrap;font-family:'Merriweather',serif;font-size:14px;}
 <main>
 
 <div class="search-area">
-  <input id="buscaTexto" placeholder="Digite: Constituicao, CLT, Estatuto, Previdenciaria...">
+  <input id="buscaTexto" placeholder="Digite: Constituição, CLT, Estatuto, Previdenciaria...">
   <select id="buscaTipo">
     <option value="">Todos</option>
     <option value="Constituicao">Constituição</option>
@@ -112,88 +112,26 @@ pre{white-space:pre-wrap;font-family:'Merriweather',serif;font-size:14px;}
 </div>
 
 <script>
+// --- Array com todas as leis antigas + novas ---
 const leis = [
-{
-nome:"Constituicao Federal",
-tipo:"Constituicao",
-texto:`CONSTITUICAO DA REPUBLICA FEDERATIVA DO BRASIL - 1988
-Art. 1º A República Federativa do Brasil...
-[conteúdo completo da Constituição aqui]`
-},
-{
-nome:"CLT - Consolidacao das Leis do Trabalho",
-tipo:"Trabalhista",
-texto:`CONSOLIDACAO DAS LEIS DO TRABALHO - CLT
-[conteúdo completo da CLT aqui]`
-},
-{
-nome:"Estatuto da Crianca e do Adolescente",
-tipo:"Estatuto",
-texto:`ESTATUTO DA CRIANCA E DO ADOLESCENTE
-[conteúdo completo do ECA]`
-},
-{
-nome:"Estatuto do Idoso",
-tipo:"Estatuto",
-texto:`ESTATUTO DO IDOSO
-[conteúdo completo do Estatuto do Idoso]`
-},
-{
-nome:"Estatuto da OAB",
-tipo:"Estatuto",
-texto:`ESTATUTO DA ORDEM DOS ADVOGADOS DO BRASIL
-[conteúdo completo do Estatuto da OAB]`
-},
-{
-nome:"Codigo de Defesa do Consumidor",
-tipo:"Civil",
-texto:`CODIGO DE DEFESA DO CONSUMIDOR
-[conteúdo completo do CDC]`
-},
-{
-nome:"Codigo de Processo Civil",
-tipo:"Civil",
-texto:`CODIGO DE PROCESSO CIVIL
-[conteúdo completo do CPC]`
-},
-{
-nome:"Codigo de Processo Penal",
-tipo:"Penal",
-texto:`CODIGO DE PROCESSO PENAL
-[conteúdo completo do CPP]`
-},
-{
-nome:"Lei Previdenciaria 1",
-tipo:"Previdenciaria",
-texto:`LEI PREVIDENCIARIA 1
-[conteúdo completo da lei previdenciaria 1]`
-},
-{
-nome:"Lei Previdenciaria 2",
-tipo:"Previdenciaria",
-texto:`LEI PREVIDENCIARIA 2
-[conteúdo completo da lei previdenciaria 2]`
-},
-{
-nome:"Codigo Tributario Nacional",
-tipo:"Tributario",
-texto:`CODIGO TRIBUTARIO NACIONAL
-[conteúdo completo do CTN]`
-},
-{
-nome:"Codigo de Transito Brasileiro",
-tipo:"Transito",
-texto:`CODIGO DE TRANSITO BRASILEIRO - CTB
-[conteúdo completo do CTB]`
-},
-{
-nome:"Legislacao Empresarial",
-tipo:"Empresarial",
-texto:`LEGISLACAO EMPRESARIAL
-[conteúdo completo da legislacao empresarial]`
-}
+{nome:"Constituicao Federal",tipo:"Constituicao",texto:`[CONTEÚDO COMPLETO DA CONSTITUIÇÃO]`},
+{nome:"CLT - Consolidacao das Leis do Trabalho",tipo:"Trabalhista",texto:`[CONTEÚDO COMPLETO DA CLT]`},
+{nome:"Estatuto da Crianca e do Adolescente",tipo:"Estatuto",texto:`[CONTEÚDO COMPLETO DO ECA]`},
+{nome:"Estatuto do Idoso",tipo:"Estatuto",texto:`[CONTEÚDO COMPLETO DO ESTATUTO DO IDOSO]`},
+{nome:"Estatuto da OAB",tipo:"Estatuto",texto:`[CONTEÚDO COMPLETO DO ESTATUTO DA OAB]`},
+{nome:"Codigo de Defesa do Consumidor",tipo:"Civil",texto:`[CONTEÚDO COMPLETO DO CDC]`},
+{nome:"Codigo de Processo Civil",tipo:"Civil",texto:`[CONTEÚDO COMPLETO DO CPC]`},
+{nome:"Codigo de Processo Penal",tipo:"Penal",texto:`[CONTEÚDO COMPLETO DO CPP]`},
+
+// --- Novas leis solicitadas ---
+{nome:"Lei Previdenciaria 1",tipo:"Previdenciaria",texto:`[CONTEÚDO COMPLETO DA LEI PREVIDENCIÁRIA 1]`},
+{nome:"Lei Previdenciaria 2",tipo:"Previdenciaria",texto:`[CONTEÚDO COMPLETO DA LEI PREVIDENCIÁRIA 2]`},
+{nome:"Codigo Tributario Nacional",tipo:"Tributario",texto:`[CONTEÚDO COMPLETO DO CTN]`},
+{nome:"Codigo de Transito Brasileiro",tipo:"Transito",texto:`[CONTEÚDO COMPLETO DO CTB]`},
+{nome:"Legislacao Empresarial",tipo:"Empresarial",texto:`[CONTEÚDO COMPLETO DA LEGISLAÇÃO EMPRESARIAL]`}
 ];
 
+// --- Funções de render, filtro e modal ---
 function render(lista){
   const div=document.getElementById("listaLeis");
   div.innerHTML="";
