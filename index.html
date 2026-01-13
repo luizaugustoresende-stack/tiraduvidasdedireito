@@ -1,14 +1,126 @@
-<section id="conteudo-editorial" style="max-width:900px;margin:20px auto;padding:15px;">
-  <h1>Modelos Jurídicos e Legislação</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tira Dúvidas de Direito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <p>
-    Este site reúne modelos de petições, peças processuais e legislação
-    brasileira organizados para facilitar o trabalho de advogados,
-    oficiais de justiça e estudantes de Direito.
-  </p>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762175535259498"
+     crossorigin="anonymous"></script>
 
-  <p>
-    O conteúdo disponibilizado possui caráter informativo e educacional,
-    não substituindo a análise profissional em casos concretos.
-  </p>
-</section>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+
+    .overlay {
+      background: rgba(245, 245, 245, 0.88);
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .busca-home {
+      max-width: 600px;
+      margin: 40px auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .busca-home input {
+      flex: 1;
+      padding: 14px;
+      font-size: 18px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .busca-home button {
+      padding: 14px 20px;
+      font-size: 18px;
+      background: #2c2c2c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .busca-home button:hover {
+      background: #000;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-size: 20px;
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay">
+
+  <header>
+    <h1>Tira Dúvidas de Direito</h1>
+    <p>Leis completas, modelos de peças processuais e pesquisa jurídica</p>
+  </header>
+
+  <!-- BUSCA GLOBAL -->
+  <form class="busca-home" action="busca.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar em leis e modelos..." required>
+    <button type="submit">Pesquisar</button>
+  </form>
+
+  <nav>
+    <a href="leis.html">Leis</a>
+    <a href="modelos.html">Modelos</a>
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="privacidade.html">Privacidade</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <footer>
+    © 2026 – Tira Dúvidas de Direito
+  </footer>
+
+</div>
+
+</body>
+</html>
